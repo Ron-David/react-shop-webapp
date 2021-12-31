@@ -51,7 +51,7 @@ const MyLink = styled(Link)`
 
 `
 const Label = styled.label`
-margin: 0;
+margin: 0rem;
 color: ${p => p.color || colors.dark};
 direction: rtl;
 font-family: cursive;

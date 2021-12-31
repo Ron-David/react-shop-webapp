@@ -8,7 +8,7 @@ const fakeCategoryItems = [
     { name: 'דף הבית', path: '/' },
     { name: 'איך זה עובד?', path: '/how-to-install' },
     { name: 'מי אנחנו?', path: '/' },
-    { name: 'צור קשר', path: '/' },
+    { name: 'צור קשר', path: '/contact-us' },
 ]
 
 function Navbar({ categories = fakeCategoryItems }) {
