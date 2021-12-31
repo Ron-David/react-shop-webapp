@@ -34,7 +34,7 @@ function HowToInstallPage(props) {
                 <Container
                     key={id}
                     data-aos="fade-up"
-                    data-aos-anchor-placement="bottom-bottom"
+                    data-aos-anchor-placement="center-bottom"
                     data-aos-duration="1000"
                 >
 
@@ -55,7 +55,7 @@ function HowToInstallPage(props) {
 }
 const Container = styled.div`
     background-color: ${colors.lightGrey};
-    height: 80vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     padding: 3rem 1rem;
