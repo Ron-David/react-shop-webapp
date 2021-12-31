@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Ron-David/react-shop-webapp/static/css/main.31c7f2fb.css",
+    "main.js": "/Ron-David/react-shop-webapp/static/js/main.7f8aeddb.js",
+    "static/js/787.149179eb.chunk.js": "/Ron-David/react-shop-webapp/static/js/787.149179eb.chunk.js",
+    "static/media/our_neighborhood.svg": "/Ron-David/react-shop-webapp/static/media/our_neighborhood.a89d5a79185ada06cdaf7931d837ab2c.svg",
+    "index.html": "/Ron-David/react-shop-webapp/index.html",
+    "main.31c7f2fb.css.map": "/Ron-David/react-shop-webapp/static/css/main.31c7f2fb.css.map",
+    "main.7f8aeddb.js.map": "/Ron-David/react-shop-webapp/static/js/main.7f8aeddb.js.map",
+    "787.149179eb.chunk.js.map": "/Ron-David/react-shop-webapp/static/js/787.149179eb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31c7f2fb.css",
+    "static/js/main.7f8aeddb.js"
+  ]
+}
