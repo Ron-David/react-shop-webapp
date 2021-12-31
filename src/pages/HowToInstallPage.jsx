@@ -55,7 +55,7 @@ function HowToInstallPage(props) {
 }
 const Container = styled.div`
     background-color: ${colors.lightGrey};
-    height: 40vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     padding: 3rem 1rem;

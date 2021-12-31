@@ -31,7 +31,6 @@ function Clouds({ numOfClouds = 5 }) {
                     rtl={c.rtl} />
             )}
             {/* <ImgCloud src="https://cdn.pixabay.com/photo/2012/05/07/02/11/cloud-47582_1280.png" alt='cloud' height={200} duration={15} top={5} />
-            <ImgCloud src="https://cdn.pixabay.com/photo/2012/05/07/02/11/cloud-47582_1280.png" alt='cloud' height={300} duration={25} top={25} />
             <ImgCloud src="https://cdn.pixabay.com/photo/2012/05/07/02/11/cloud-47582_1280.png" alt='cloud' height={400} duration={35} top={35} /> */}
         </div>
     );

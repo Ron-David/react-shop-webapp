@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import styled from "styled-components";
-import { ReactComponent as TopImg } from '../assets/our_neighborhood.svg';
+import { ReactComponent as TopImg } from '../assets/houses.svg';
 import Media from '../components/Media';
 import * as S from '../config/styles'
 import { FaShippingFast } from 'react-icons/fa';
@@ -30,12 +30,12 @@ function HomePage() {
     }, []);
     return (
         <div>
-            <Clouds numOfClouds={10} />
+            <Clouds numOfClouds={5} />
             <ContainerA>
                 <TopContainer data-aos="fade-right"
                     data-aos-duration="1000"
                 >
-                    <TopImg height='40%' />
+                    <TopImg height='90%' />
                 </TopContainer>
                 <Container data-aos="fade-left"
                     data-aos-duration="1000"
