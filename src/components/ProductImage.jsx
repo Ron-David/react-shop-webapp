@@ -22,7 +22,7 @@ const MainImage = styled.img`
 height: 20rem;
 width: 100%;
 object-fit: contain;
-
+background-color: ${colors.white};
 display: flex;
 padding: 1rem 0;
 justify-content: center;

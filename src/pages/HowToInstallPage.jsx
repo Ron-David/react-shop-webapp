@@ -1,12 +1,9 @@
 import React, { useEffect } from 'react';
-import styled, { keyframes } from 'styled-components';
-import { bounce } from 'react-animations'
+import styled from 'styled-components';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import colors from '../config/colors';
-import * as S from '../config/styles'
-import Icon from '../components/Icon';
 import { RiNumber1, RiNumber2, RiNumber3 } from 'react-icons/ri';
 import { HiOutlineChevronDoubleDown } from 'react-icons/hi';
 

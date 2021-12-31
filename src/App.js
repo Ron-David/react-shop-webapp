@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Footer from "./components/Footer";
-import { Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import HowToInstallPage from './pages/HowToInstallPage';
@@ -22,6 +22,7 @@ function App() {
 const Container = styled.div`
 display: flex;
 flex-direction: column;
+
 `
 
 

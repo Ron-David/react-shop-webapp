@@ -2,19 +2,17 @@ import React, { useEffect } from 'react';
 import styled from "styled-components";
 import { ReactComponent as TopImg } from '../assets/our_neighborhood.svg';
 import Media from '../components/Media';
-import colors from '../config/colors';
 import * as S from '../config/styles'
-import { FaShippingFast, FaRegCheckCircle } from 'react-icons/fa';
+import { FaShippingFast } from 'react-icons/fa';
 import { IoMdPricetags } from 'react-icons/io';
 import { HiShieldCheck } from 'react-icons/hi';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import Button from '../components/Button';
 import SkewedContainer from '../components/SkewedContainer';
 import Product from '../components/Product';
-import Input from '../components/Input';
 import InputForm from '../components/InputForm';
+import Clouds from '../components/animations/Clouds';
 
 const title = 'להיפטר מהיונים-ללא דוקרנים!'
 const subText = 'הגיע הזמן לפתרון יעיל ואסתטי לבעיית היונים'
@@ -32,6 +30,7 @@ function HomePage() {
     }, []);
     return (
         <div>
+            <Clouds numOfClouds={10} />
             <ContainerA>
                 <TopContainer data-aos="fade-right"
                     data-aos-duration="1000"
@@ -121,5 +120,6 @@ margin-bottom: 5rem ;
         margin-top: 8rem;
 
     }
-`
+`;
+
 export default HomePage;
