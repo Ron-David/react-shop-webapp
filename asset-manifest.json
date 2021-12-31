@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/react-shop-webapp/static/css/main.31c7f2fb.css",
-    "main.js": "/react-shop-webapp/static/js/main.4b8e89b0.js",
+    "main.js": "/react-shop-webapp/static/js/main.b3f32563.js",
     "static/js/787.149179eb.chunk.js": "/react-shop-webapp/static/js/787.149179eb.chunk.js",
-    "static/media/our_neighborhood.svg": "/react-shop-webapp/static/media/our_neighborhood.a89d5a79185ada06cdaf7931d837ab2c.svg",
+    "static/media/houses.svg": "/react-shop-webapp/static/media/houses.2c2d155760f55be50d1eed5691028ef3.svg",
     "index.html": "/react-shop-webapp/index.html",
     "main.31c7f2fb.css.map": "/react-shop-webapp/static/css/main.31c7f2fb.css.map",
-    "main.4b8e89b0.js.map": "/react-shop-webapp/static/js/main.4b8e89b0.js.map",
+    "main.b3f32563.js.map": "/react-shop-webapp/static/js/main.b3f32563.js.map",
     "787.149179eb.chunk.js.map": "/react-shop-webapp/static/js/787.149179eb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31c7f2fb.css",
-    "static/js/main.4b8e89b0.js"
+    "static/js/main.b3f32563.js"
   ]
 }
