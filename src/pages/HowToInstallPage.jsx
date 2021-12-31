@@ -22,14 +22,6 @@ function HowToInstallPage(props) {
     }, []);
     return (
         <div>
-
-            {/* <S.Grid1X2 rtl>
-                <Container>
-
-                </Container>
-                <ContainerB />
-            </S.Grid1X2> */}
-
             {instructions.map(({ title, text, id, Icon }) =>
                 <Container
                     key={id}

@@ -77,7 +77,6 @@ align-items: center;
 @media only screen and (min-width: 1024px) {
         width: 40%;
         margin: 3rem 0rem -2rem;
-
     }
 `
 const Container = styled.div`

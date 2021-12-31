@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { FiMail } from 'react-icons/fi'
 import { BsFillPersonFill, BsFillPencilFill } from 'react-icons/bs'
@@ -9,17 +9,21 @@ import * as S from '../config/styles'
 import colors from '../config/colors';
 
 function InputForm(props) {
+    const [email, setEmail] = useState()
+    const [name, setName] = useState()
+    const [text, setText] = useState()
+
     return (
         <Container>
             <S.P rtl={true}>השאר פרטים:</S.P>
             <InputContainer>
-                <Input placeholder='Email' iconBackground={colors.lightGrey}>
+                <Input placeholder='Email' value={email} onChange={setEmail} iconBackground={colors.lightGrey}>
                     <FiMail size={20} color={colors.primary} />
                 </Input>
-                <Input placeholder='Name' iconBackground={colors.lightGrey}>
+                <Input placeholder='Name' value={name} onChange={setName} iconBackground={colors.lightGrey}>
                     <BsFillPersonFill size={20} color={colors.primary} />
                 </Input>
-                <Input placeholder='Text' iconBackground={colors.lightGrey}>
+                <Input placeholder='Text' value={text} onChange={setText} iconBackground={colors.lightGrey}>
                     <BsFillPencilFill size={20} color={colors.primary} />
                 </Input>
             </InputContainer>

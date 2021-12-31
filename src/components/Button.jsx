@@ -26,7 +26,7 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 0.6rem;
+    border-radius: 2rem;
     cursor: pointer;
     text-align: center;
     font-weight: 800;

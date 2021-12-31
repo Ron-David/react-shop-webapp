@@ -4,13 +4,13 @@ import styled from 'styled-components';
 import colors from '../config/colors';
 import Icon from './Icon';
 
-function Input({ placeholder = 'Enter text here...', iconBackground, children }) {
+function Input({ placeholder = 'Enter text here...', value, onChange, iconBackground, children }) {
     return (
         <RounedDiv>
             <Icon background={iconBackground}>
                 {children}
             </Icon>
-            <RoundedInput placeholder={placeholder} />
+            <RoundedInput placeholder={placeholder} onChange={onChange} defaultValue={value} />
         </RounedDiv>
     );
 }

@@ -67,7 +67,8 @@ direction: rtl;
 `
 const Select = styled.select`
 color: ${colors.secondary};
-border-radius: 0.6rem;
+background-color: ${colors.white};
+border-radius: 0.4rem;
 outline: none;
 width: 100%;
 font-size: ${p => p.size || 15}px;
