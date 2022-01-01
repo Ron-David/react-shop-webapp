@@ -4,13 +4,13 @@ import colors from '../config/colors';
 
 
 function Button({
-    text,
-    onClick,
     backgroundColor = colors.secondary,
-    textColor = colors.white,
+    Icon,
+    onClick,
     size = 15,
+    text,
+    textColor = colors.white,
     width,
-    Icon
 
 }) {
     return (
@@ -21,27 +21,26 @@ function Button({
     );
 }
 const Container = styled.div`
-    background-color: ${p => p.backgroundColor};
-    width: ${p => p.width || ''}rem;
-    display: flex;
-    justify-content: center;
     align-items: center;
+    background-color: ${p => p.backgroundColor};
     border-radius: 2rem;
-    cursor: pointer;
-    text-align: center;
-    font-weight: 800;
     border: 1px solid ${colors.primary};
     color: ${p => p.textColor};
-    padding: 1em 1em;
+    cursor: pointer;
+    display: flex;
     font-size: ${p => p.size}px;
+    font-weight: 800;
+    justify-content: center;
+    padding: 1em 1em;
+    text-align: center;
     transition: all 0.4s;
+    width: ${p => p.width || ''}rem;
 
     :hover{
     background-color: ${colors.white};
     color: ${p => p.backgroundColor};
 
     }
-
     @media only screen and (min-width: 1024px) {
         font-size: ${({ size }) => size ? size * 1.3 : 20}px;
     }

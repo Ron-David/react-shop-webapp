@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import InputForm from '../components/InputForm';
-import { ReactComponent as TopImg } from '../assets/contact.svg';
 import styled from 'styled-components';
-import * as S from '../config/styles'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
+import { ReactComponent as TopImg } from '../assets/contact.svg';
+import InputForm from '../components/InputForm';
 
 function ContactPage(props) {
 
@@ -13,11 +13,11 @@ function ContactPage(props) {
     }, []);
     return (
         <Container>
-            <div data-aos="fade-right"
+            <ImgContainer data-aos="fade-right"
                 data-aos-duration="1000">
 
                 <TopImg width={400} />
-            </div>
+            </ImgContainer>
             <div data-aos="fade-up"
                 data-aos-duration="1000">
 
@@ -26,13 +26,17 @@ function ContactPage(props) {
         </Container>
     );
 }
+const ImgContainer = styled.div`
+margin: -5rem 0;
+    
+`
 
 const Container = styled.div`
-margin-bottom: 5rem;
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    margin-bottom: 5rem;
 `
 
 export default ContactPage;

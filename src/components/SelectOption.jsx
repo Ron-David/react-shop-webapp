@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import colors from '../config/colors';
+
 import * as S from '../config/styles'
 
 const fakeOptions = [
@@ -22,9 +22,9 @@ function SelectOption({ label = "אורך:", options = fakeOptions }) {
 }
 
 const Container = styled.div`
+align-items: center;
 display: flex;
 justify-content: center;
-align-items: center;
 margin-left: 2rem;
 `
 

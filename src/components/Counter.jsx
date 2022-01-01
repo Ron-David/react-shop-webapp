@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { FaPlus, FaMinus } from 'react-icons/fa';
+
 import colors from '../config/colors';
 import Button from './Button';
-import { FaPlus, FaMinus } from 'react-icons/fa';
 
 function Counter({ onIncrease, onDecrease, size = 8 }) {
 
@@ -33,16 +34,16 @@ const Container = styled.div`
 
 `
 const Count = styled.input`
-    width: 100%;
-    max-width: 4rem;
-    border: 1px solid ${colors.secondary};
     border-radius: 0.6rem;
-    font-size: 1.2rem;
-    text-align: center;
-    outline: none;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 700;
+    border: 1px solid ${colors.secondary};
     color: ${colors.dark};
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    font-weight: 700;
+    max-width: 4rem;
+    outline: none;
+    text-align: center;
+    width: 100%;
 
     ::-webkit-inner-spin-button{
         -webkit-appearance: none; 

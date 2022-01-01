@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import colors from '../config/colors';
 import * as S from '../config/styles'
 
 function Price({
-    oldPrice = 200,
-    currentPrice = 99,
     currency = '₪',
-    title = "פס-הלם חשמלי להרחקת יונים!"
+    currentPrice = 99,
+    oldPrice = 200,
+    title = "פס-הלם חשמלי להרחקת יונים!",
 }) {
     return (
         <Container>
@@ -34,8 +35,8 @@ function Price({
 const CurrentPrice = styled.span`
     margin: 0;
 color: ${({ textColor }) => textColor ? textColor : colors.dark};
-font-weight: 900;
 font-size: 30px;
+font-weight: 900;
 padding-left: 1rem;
 
 @media only screen and (min-width: 1024px) {
@@ -50,10 +51,10 @@ const PriceContainer = styled.div`
 const OldPrice = styled.span`
     margin: 0;
 color: ${({ textColor }) => textColor ? textColor : colors.red};
-font-weight: 100;
-font-size: 23px;
-text-decoration: line-through;
 font-family: Arial, Helvetica, sans-serif;
+font-size: 23px;
+font-weight: 100;
+text-decoration: line-through;
 
 
 @media only screen and (min-width: 1024px) {
@@ -62,12 +63,12 @@ font-family: Arial, Helvetica, sans-serif;
 `
 
 const Container = styled.div`
+align-items: center;
+direction: rtl;
 display: block;
 font-family: 'Courier New', Courier, monospace;
 justify-content: space-around;
-align-items: center;
 margin: 1rem;
-direction: rtl;
 @media only screen and (min-width: 1024px) {
     margin: 0rem;
 

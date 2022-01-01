@@ -1,25 +1,28 @@
 import React from 'react';
+import styled from 'styled-components';
+
 import colors from '../config/colors';
 import SkewedContainer from './SkewedContainer';
 import * as S from '../config/styles'
-import styled from 'styled-components';
+
 function Footer(props) {
     return (
-        <SkewedContainer flip background={colors.secondary}>
 
-            <Container>
+        <Container>
+            <SkewedContainer flip background={colors.secondary}>
 
                 <S.P color={colors.white}>
                     כל הזכויות שמורות Ⓒ
                 </S.P>
-            </Container>
-        </SkewedContainer>
+            </SkewedContainer>
+        </Container>
     );
 }
 
 const Container = styled.div`
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    margin-top: 5rem;
 `
 
 export default Footer;

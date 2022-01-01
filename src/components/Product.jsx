@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import * as S from '../config/styles';
 
 import Button from './Button';
 import Counter from './Counter';
@@ -36,9 +35,9 @@ const Container = styled.div`
 
 `
 const VarintContainer = styled.div`
+    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
     margin: 1rem 0;
 
 `
@@ -50,8 +49,8 @@ const DetailsContainer = styled.div`
 
 const BtnConteiner = styled.div`
 display: flex;
-width: 100%;
 justify-content: space-evenly;
+width: 100%;
 @media only screen and (min-width: 1024px) {
     margin: 0rem;
     }

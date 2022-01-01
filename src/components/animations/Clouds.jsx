@@ -17,13 +17,14 @@ function Clouds({ numOfClouds = 5 }) {
             {createClouds(numOfClouds).map(c =>
 
                 <ImgCloud
-                    key={c.key}
-                    src={url}
                     alt='cloud'
-                    height={c.height}
                     duration={c.duration}
+                    height={c.height}
+                    key={c.key}
+                    rtl={c.rtl}
+                    src={url}
                     top={c.top}
-                    rtl={c.rtl} />
+                />
             )}
         </div>
     );
@@ -31,36 +32,36 @@ function Clouds({ numOfClouds = 5 }) {
 
 
 const ImgCloud = styled.img`
-    position: fixed;
-    z-index: -1;
-    height: ${p => p.height || 5}rem;
     animation: ${p => p.rtl ? 'rtl' : 'ltr'} ${p => p.duration || 10}s 1s infinite ;
-    top: ${p => p.top || 15}rem;
+    height: ${p => p.height || 5}rem;
     opacity: 0;
+    position: fixed;
+    top: ${p => p.top || 15}rem;
+    z-index: -1;
     @keyframes rtl {
         0%{
-            left: 20rem;
+            left: 100%;
             opacity: 0;
         }
         50%{
             opacity: 0.3;
         }
         100%{
-            left: -10rem;
+            left: 0%;
             opacity: 0;
         }
     }
 
     @keyframes ltr {
         0%{
-            left: 0rem;
+            left: 0%;
             opacity: 0;
         }
         50%{
             opacity: 0.3;
         }
         100%{
-            left: 30rem;
+            left: 100%;
             opacity: 0;
         }
     }

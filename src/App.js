@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import Footer from "./components/Footer";
-import { Route, Routes } from "react-router-dom";
+import React, { useEffect } from 'react';
+
+import { Route, Routes, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import HowToInstallPage from './pages/HowToInstallPage';

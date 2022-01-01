@@ -1,12 +1,13 @@
 import React from 'react';
-import * as S from '../config/styles'
 import styled from 'styled-components';
+
+import * as S from '../config/styles'
 import colors from '../config/colors';
 
 function Media({
     Icon,
+    text = 'מהירות מהירות מהירות מהוירת',
     title = 'מהירות',
-    text = 'מהירות מהירות מהירות מהוירת'
 }) {
 
     return (

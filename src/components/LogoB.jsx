@@ -21,24 +21,24 @@ function LogoB({ colorsList = logoColors }) {
   );
 }
 const Container = styled.div`
-position: relative;
-height: 10rem;
-width: 10rem;
-display: flex;
 align-items: center;
+display: flex;
+height: 10rem;
+position: relative;
+width: 10rem;
 `
 const Circle = styled.div`
- height: ${({ size }) => size ? size : 9}rem;
- width: ${({ size }) => size ? size : 9}rem;
- background-color: ${({ colors }) => colors[0]};
- margin: 0.5rem;
- border-radius: 1em 5rem 5rem 5rem;
- position: absolute;
- animation-name: flip;
+ 
+ animation-delay:  1s;
  animation-duration: 3s;
  animation-iteration-count: 1;
- animation-delay:  1s;
- 
+ animation-name: flip;
+ background-color: ${({ colors }) => colors[0]};
+ border-radius: 1em 5rem 5rem 5rem;
+ height: ${({ size }) => size ? size : 9}rem;
+ margin: 0.5rem;
+ position: absolute;
+ width: ${({ size }) => size ? size : 9}rem;
 
 @keyframes flip {
     0%{

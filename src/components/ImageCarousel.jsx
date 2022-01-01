@@ -1,6 +1,7 @@
 import React from 'react';
-import colors from '../config/colors';
 import styled from 'styled-components';
+
+import colors from '../config/colors';
 
 function ImageCarousel({ imagesUrl, onClick }) {
     return (
@@ -13,14 +14,14 @@ function ImageCarousel({ imagesUrl, onClick }) {
 }
 
 const Images = styled.img`
-height: 5rem;
-min-width: 5rem;
-max-width: 5rem;
-margin: 1rem ;
-border: 1px solid ${colors.lightGrey};
 border-radius: 0.5rem;
+border: 1px solid ${colors.lightGrey};
 box-shadow: 0 0 1rem 0.2rem ${colors.lightGrey};
 cursor: pointer;
+height: 5rem;
+margin: 1rem ;
+max-width: 5rem;
+min-width: 5rem;
 transition: all 0.4s;
 
 :hover{
@@ -32,8 +33,8 @@ transition: all 0.4s;
 
 const Container = styled.div`
     display: inline-flex;
-    width: 100%;
     overflow: auto;
+    width: 100%;
 `
 
 

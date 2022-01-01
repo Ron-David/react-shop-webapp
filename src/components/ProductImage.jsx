@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 
 import ImageCarousel from './ImageCarousel';
-import styled from 'styled-components';
 import colors from '../config/colors';
 
 function ProductImage({ imagesUrl }) {
@@ -19,16 +19,16 @@ margin: 1rem;
 `
 
 const MainImage = styled.img`
-height: 20rem;
-width: 100%;
-object-fit: contain;
 background-color: ${colors.white};
-display: flex;
-padding: 1rem 0;
-justify-content: center;
-border: 1px solid ${colors.lightGrey};
 border-radius: 0.5rem;
+border: 1px solid ${colors.lightGrey};
 box-shadow: 0 0 1rem 0.2rem ${colors.lightGrey};
+display: flex;
+height: 20rem;
+justify-content: center;
+object-fit: contain;
+padding: 1rem 0;
+width: 100%;
 
 
 @media only screen and (min-width: 1024px) {

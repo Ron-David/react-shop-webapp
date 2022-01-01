@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { FiMail } from 'react-icons/fi'
-import { BsFillPersonFill, BsFillPencilFill } from 'react-icons/bs'
+import { BsFillPersonFill } from 'react-icons/bs'
 
 import Button from './Button';
 import Input from './Input';
@@ -33,14 +33,14 @@ function InputForm({ label = 'השאר פרטים:' }) {
 }
 
 const Container = styled.div`
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
 `
 const InputContainer = styled.div`
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin: 1rem 0rem;
 `;
 

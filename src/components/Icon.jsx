@@ -12,15 +12,16 @@ function Icon({ children, background }) {
 }
 
 const Container = styled.div`
+    align-items: center;
+    background-color: ${({ background }) => background ? background : colors.secondary};
+    border-radius: 30px;
     display: flex;
     height: 2.5rem;
-    width: 100%;
-    border-radius: 30px;
-    background-color: ${({ background }) => background ? background : colors.secondary};
-    margin: 0px 2px;
-    margin-right: 0.5rem;
     justify-content: center;
-    align-items: center;
+    margin-right: 0.5rem;
+    margin: 0px 2px;
+    width: 100%;
+
     @media (max-width: 1024px)  {    
         height: 2rem;
 

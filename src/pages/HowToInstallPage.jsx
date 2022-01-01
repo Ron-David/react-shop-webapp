@@ -2,11 +2,10 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
-import colors from '../config/colors';
 import { RiNumber1, RiNumber2, RiNumber3 } from 'react-icons/ri';
 import { HiOutlineChevronDoubleDown } from 'react-icons/hi';
 
+import colors from '../config/colors';
 import Media from '../components/Media';
 
 
@@ -47,19 +46,19 @@ function HowToInstallPage(props) {
 }
 const Container = styled.div`
     background-color: ${colors.lightGrey};
-    height: 60vh;
     display: flex;
     flex-direction: column;
-    padding: 3rem 1rem;
-    margin-bottom: 0.5rem;
+    height: 60vh;
     justify-content: space-between;
+    margin-bottom: 0.5rem;
+    padding: 3rem 1rem;
 
 `
 const IconContainer = styled.div`
     align-self: center;
+    animation: jump 2s 1s infinite;
     color: ${colors.secondary};
 
-    animation: jump 2s 1s infinite;
 @keyframes jump {
 0%{
     opacity: 1;

@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 import styled from "styled-components";
-import { ReactComponent as TopImg } from '../assets/houses.svg';
-import Media from '../components/Media';
-import * as S from '../config/styles'
 import { FaShippingFast } from 'react-icons/fa';
 import { IoMdPricetags } from 'react-icons/io';
 import { HiShieldCheck } from 'react-icons/hi';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+import { ReactComponent as TopImg } from '../assets/houses.svg';
+import Media from '../components/Media';
+import * as S from '../config/styles'
 import SkewedContainer from '../components/SkewedContainer';
 import Product from '../components/Product';
 import InputForm from '../components/InputForm';
@@ -69,22 +69,22 @@ function HomePage() {
     );
 }
 const TopContainer = styled.div`
-width: 100%;
-margin: 1rem 0rem -2rem;
-display: flex;
 align-items: center;
+display: flex;
+margin: 1rem 0rem -2rem;
+width: 100%;
 
 @media only screen and (min-width: 1024px) {
-        width: 40%;
         margin: 3rem 0rem -2rem;
+        width: 40%;
     }
 `
 const Container = styled.div`
-    width: 100%;
-    display: flex;
-    margin: 3.5rem 0;
-    justify-content: center;
     align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 3.5rem 0;
+    width: 100%;
 
     @media only screen and (min-width: 1024px) {
         clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
@@ -94,8 +94,8 @@ const Container = styled.div`
     }
 `
 const Text = styled.span`
-text-align: center;
 direction: rtl;
+text-align: center;
 
 @media only screen and (min-width: 1024px) {
     text-align: start;

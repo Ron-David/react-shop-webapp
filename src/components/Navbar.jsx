@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styled from "styled-components";
-import { BsList } from 'react-icons/bs';
+import { BsList, BsCart3 } from 'react-icons/bs';
+import { Badge } from '@mui/material/';
+
 import colors from '../config/colors';
 import * as S from '../config/styles'
 
@@ -22,9 +24,15 @@ function Navbar({ categories = fakeCategoryItems }) {
                     </Logo>
                 </S.MyLink>
 
-                <IconContainer active={active} onClick={() => setActive(!active)}>
-                    <BsList size={25} />
-                </IconContainer>
+                <CartContiner>
+                    <Badge badgeContent={4} color='error'>
+                        <BsCart3 size={25} />
+                    </Badge>
+                    <IconContainer active={active} onClick={() => setActive(!active)}>
+                        <BsList size={25} />
+                    </IconContainer>
+                </CartContiner>
+
 
                 <CategoryContainer active={active}>
                     {categories.map(({ name, path }) =>
@@ -36,60 +44,72 @@ function Navbar({ categories = fakeCategoryItems }) {
                     )}
                 </CategoryContainer>
             </Container>
-        </Wrapper>
+        </Wrapper >
     );
 }
 const Wrapper = styled.div`
     margin-bottom: 2.5rem;
 `
-const Container = styled.div`
+
+const CartContiner = styled.div`
+    color: ${colors.white};
+    align-items: center;
+    justify-content: center;
     display: flex;
-    width: 100%;
-    position: fixed;
+    cursor: pointer;
+    margin: 0 0.5rem;
+`
+const Container = styled.div`
+    align-items: center;
+    background-color: ${colors.secondary};
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: ${colors.secondary};
-    align-items: center;
+    padding: 0.7rem 0;
+    position: fixed;
+    width: 100%;
     z-index: 1;
     @media only screen and (min-width: 1024px) {
         flex-wrap: nowrap;
-        justify-content: space-evenly;
+        justify-content: center;
 
     }
 
 `
 const Logo = styled.div`
-    margin-left: 1rem;
     color: ${colors.white};
-    font-weight: 600;
     cursor: pointer;
+    font-weight: 600;
+    margin: 0 1rem ;
 `;
 
 const IconContainer = styled.div`
-    margin: 0.5rem;
     color: ${({ active }) => active ? colors.white : colors.lightGrey};
     cursor: pointer;
-    transition: transform 0.5s ease-out ,color 0.2s;
     transform: rotate(${({ active }) => active ? -90 : 0}deg);
+    transition: transform 0.5s ease-out ,color 0.2s;
+    margin: 0 0.5rem;
+
 :hover{
     color: ${colors.white};
 }
 @media only screen and (min-width: 1024px) {
-    visibility: hidden;
+    display: none;
+
     }
 
 `
 
 const CategoryContainer = styled.ul`
     background-color: ${colors.secondary};
-    text-align: center;
-    padding: 0 ;
+    direction: rtl;
     margin: 0;
     max-height: ${({ active }) => active ? 50 : 0}vh;
-    overflow: hidden;
-    transition: all 0.5s ;
     opacity: ${({ active }) => active ? 1 : 0};
-    direction: rtl;
+    overflow: hidden;
+    padding: 0 ;
+    text-align: center;
+    transition: all 0.5s ;
     @media only screen and (max-width: 1024px) {
         width: 100%;
 
@@ -103,13 +123,13 @@ const CategoryContainer = styled.ul`
 
 `
 const CategoryItem = styled.li`
-color: ${colors.lightGrey};
-list-style: none;
-transition: all 0.4s;
 border-top: 1px dotted ${colors.lightGrey};
+color: ${colors.lightGrey};
 cursor: pointer;
 direction: rtl;
+list-style: none;
 padding: 0.7rem;
+transition: all 0.4s;
 :hover{
     color: ${colors.white};
     transform: scale(1.1);
