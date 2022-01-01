@@ -6,21 +6,23 @@ import colors from "./colors";
 const P = styled.p`
 color: ${p => p.color || colors.dark};
 direction: rtl;
-font-family: cursive;
+font-family: 'Courier New', Courier, monospace;
 font-size: ${p => p.size || 12}px;
+font-weight: 600;
 margin: 0;
 
 @media only screen and (min-width: 1024px) {
         font-size: ${p => p.size * 1.35 || 16}px;
     }
 `
+
 const H1 = styled.h1`
 background: ${p => p.background};
 color: ${p => p.color || colors.dark};
 direction: rtl;
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 font-size: ${p => p.size || 28}px;
-margin: 0;    
+margin: 0.5rem 0;    
 
 @media only screen and (min-width: 1024px) {
         font-size: 32px;
@@ -30,11 +32,11 @@ const H3 = styled.h3`
 color: ${colors.dark};
 direction: rtl;
 font-family: 'Courier New', Courier, monospace;
-font-size: 24px;
-margin: 1rem 0;    
+font-size: ${p => p.size || 24}px;
+margin: 0.5rem 0;    
 
 @media only screen and (min-width: 1024px) {
-        font-size: 30px;
+    font-size: ${p => p.size * 1.25 || 30}px;
     }
 `
 

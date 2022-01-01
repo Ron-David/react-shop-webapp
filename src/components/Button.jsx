@@ -11,10 +11,11 @@ function Button({
     text,
     textColor = colors.white,
     width,
+    rounded = false,
 
 }) {
     return (
-        <Container onClick={onClick} width={width} backgroundColor={backgroundColor} textColor={textColor} size={size}>
+        <Container rounded={rounded} onClick={onClick} width={width} backgroundColor={backgroundColor} textColor={textColor} size={size}>
             {Icon}
             {text}
         </Container>
@@ -23,7 +24,7 @@ function Button({
 const Container = styled.div`
     align-items: center;
     background-color: ${p => p.backgroundColor};
-    border-radius: 2rem;
+    border-radius: ${p => p.rounded ? 2 : 0.5}rem;
     border: 1px solid ${colors.primary};
     color: ${p => p.textColor};
     cursor: pointer;

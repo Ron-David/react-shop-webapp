@@ -14,7 +14,7 @@ function Media({
         <Container>
             <Text>
                 <S.H3>{title}</S.H3>
-                <S.P>{text}</S.P>
+                <S.P size={15}>{text}</S.P>
             </Text>
             <IconContainer>
                 {Icon}

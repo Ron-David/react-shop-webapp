@@ -9,7 +9,7 @@ import * as S from '../config/styles'
 const fakeCategoryItems = [
     { name: 'דף הבית', path: '/' },
     { name: 'איך זה עובד?', path: '/how-to-install' },
-    { name: 'מי אנחנו?', path: '/' },
+    { name: 'מי אנחנו?', path: '/about-us' },
     { name: 'צור קשר', path: '/contact-us' },
 ]
 
@@ -24,14 +24,16 @@ function Navbar({ categories = fakeCategoryItems }) {
                     </Logo>
                 </S.MyLink>
 
-                <CartContiner>
-                    <Badge badgeContent={4} color='error'>
-                        <BsCart3 size={25} />
-                    </Badge>
-                    <IconContainer active={active} onClick={() => setActive(!active)}>
+                <IconsContainer>
+                    <CartIcon>
+                        <Badge badgeContent={4} color='error'>
+                            <BsCart3 size={25} />
+                        </Badge>
+                    </CartIcon>
+                    <CategoryIcon active={active} onClick={() => setActive(!active)}>
                         <BsList size={25} />
-                    </IconContainer>
-                </CartContiner>
+                    </CategoryIcon>
+                </IconsContainer>
 
 
                 <CategoryContainer active={active}>
@@ -51,7 +53,7 @@ const Wrapper = styled.div`
     margin-bottom: 2.5rem;
 `
 
-const CartContiner = styled.div`
+const IconsContainer = styled.div`
     color: ${colors.white};
     align-items: center;
     justify-content: center;
@@ -81,9 +83,17 @@ const Logo = styled.div`
     cursor: pointer;
     font-weight: 600;
     margin: 0 1rem ;
+    opacity: 0.9;
+    transition: transform 0.2s ease-out ,opacity 0.2s;
+
+    :hover{
+    transform: scale(1.1);
+    opacity: 1;
+
+}
 `;
 
-const IconContainer = styled.div`
+const CategoryIcon = styled.div`
     color: ${({ active }) => active ? colors.white : colors.lightGrey};
     cursor: pointer;
     transform: rotate(${({ active }) => active ? -90 : 0}deg);
@@ -97,14 +107,24 @@ const IconContainer = styled.div`
     display: none;
 
     }
-
+`
+const CartIcon = styled.div`
+    cursor: pointer;
+    opacity: 0.9;
+    margin: 0 0.5rem;
+    transition: transform 0.2s ease-out ,opacity 0.2s;
+    
+    :hover{
+    transform: scale(1.1);
+    opacity: 1;
+    }
 `
 
 const CategoryContainer = styled.ul`
     background-color: ${colors.secondary};
     direction: rtl;
     margin: 0;
-    max-height: ${({ active }) => active ? 50 : 0}vh;
+    max-height: ${({ active }) => active ? 100 : 0}vh;
     opacity: ${({ active }) => active ? 1 : 0};
     overflow: hidden;
     padding: 0 ;

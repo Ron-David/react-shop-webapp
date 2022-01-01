@@ -8,11 +8,11 @@ import { HiOutlineChevronDoubleDown } from 'react-icons/hi';
 import colors from '../config/colors';
 import Media from '../components/Media';
 
-
+const lorem = 'הכאב עצמו חשוב לאליטה השומן העיקרית. יש, במקרים אחרים, הרבה פעמים מקובלות לחפש כל מוצא ללא הפרעה, וזה לא בחינם, וגם לא מונע זאת. איזה כאב, אכן, גם לא!'
 const instructions = [
-    { id: 0, title: 'שלב ראשון - נקה את המשטח', text: 'ככה זה עושה לי טוב', Icon: <RiNumber1 size={50} /> },
-    { id: 1, title: 'שלב שני - הסר את המדבקה', text: '', Icon: <RiNumber2 size={50} /> },
-    { id: 2, title: 'שלב שלישי - הדבק והדק!', text: '', Icon: <RiNumber3 size={50} /> },
+    { id: 0, title: 'שלב ראשון - נקה את המשטח', text: lorem, Icon: <RiNumber1 size={50} /> },
+    { id: 1, title: 'שלב שני - הסר את המדבקה', text: lorem, Icon: <RiNumber2 size={50} /> },
+    { id: 2, title: 'שלב שלישי - הדבק והדק!', text: lorem, Icon: <RiNumber3 size={50} /> },
 ]
 
 function HowToInstallPage(props) {
@@ -48,16 +48,17 @@ const Container = styled.div`
     background-color: ${colors.lightGrey};
     display: flex;
     flex-direction: column;
-    height: 60vh;
+    height: 35vh;
     justify-content: space-between;
     margin-bottom: 0.5rem;
-    padding: 3rem 1rem;
+    padding: 3rem 0rem 0 1rem;
 
 `
 const IconContainer = styled.div`
     align-self: center;
     animation: jump 2s 1s infinite;
     color: ${colors.secondary};
+    margin: 5rem;
 
 @keyframes jump {
 0%{

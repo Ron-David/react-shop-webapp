@@ -17,11 +17,11 @@ function Counter({ onIncrease, onDecrease, size = 8 }) {
     //
     return (
         <Container>
-            <Button onClick={() => handleChange(count + 1)} Icon={
+            <Button rounded onClick={() => handleChange(count + 1)} Icon={
                 <FaPlus size={size} />
             } />
             <Count type='number' max={999} min={1} value={count} readOnly />
-            <Button onClick={() => handleChange(count - 1)} Icon={
+            <Button rounded onClick={() => handleChange(count - 1)} Icon={
                 <FaMinus size={size} />
             } />
         </Container>

@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import HowToInstallPage from './pages/HowToInstallPage';
 import ContactPage from "./pages/ContactPage";
+import AboutUsPage from "./pages/AboutUsPage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path='/how-to-install' element={<HowToInstallPage />} />
         <Route path='/contact-us' element={<ContactPage />} />
+        <Route path='/about-us' element={<AboutUsPage />} />
         <Route path='/' element={<HomePage />} />
       </Routes>
       <Footer />
